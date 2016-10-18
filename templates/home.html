@@ -7,8 +7,10 @@
 <body>
     <h1>Headlines</h1>
     {% for artical in articals %}
-        <b>{{ artical.title }}</b></ br>
-        <i>{{ artical.published }}</i></ br>
+        <b>
+            <a href="{{ artical.link }}">{{ artical.title }}</a>
+        </b><br />
+        <i>{{ artical.published }}</i>
         <p>{{ artical.summary }}</p>
         <hr />
     {% endfor %}
